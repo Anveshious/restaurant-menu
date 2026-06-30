@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme {
   --color-charcoal: #1f2421;
   --color-cream: #f7f3ec;
   --color-spice: #c65d3b;
