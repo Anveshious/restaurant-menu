@@ -39,6 +39,14 @@ export default function RestaurantSlideshow({ images }: RestaurantSlideshowProps
     );
   }
 
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
   return (
     <div className="relative mx-auto mb-8 h-64 overflow-hidden rounded-4xl border border-charcoal/10 shadow-sm sm:h-80">
       {images.map((image, index) => (
@@ -54,15 +62,33 @@ export default function RestaurantSlideshow({ images }: RestaurantSlideshowProps
 
       <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-black/10" />
 
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+      <button
+        type="button"
+        onClick={goToPrevious}
+        aria-label="Previous image"
+        className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-xl text-charcoal shadow-sm transition hover:bg-white"
+      >
+        ←
+      </button>
+
+      <button
+        type="button"
+        onClick={goToNext}
+        aria-label="Next image"
+        className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-xl text-charcoal shadow-sm transition hover:bg-white"
+      >
+        →
+      </button>
+
+      <div className="absolute bottom-0 left-1/2 flex w-full max-w-500 -translate-x-1/2 items-center gap-0.2">
         {images.map((image, index) => (
           <button
             key={image}
             type="button"
             aria-label={`Show slide ${index + 1}`}
             onClick={() => setCurrentIndex(index)}
-            className={`h-2.5 w-2.5 rounded-full transition-all ${
-              index === currentIndex ? "bg-white" : "bg-white/60"
+            className={`h-1.5 flex-1 rounded-1/2 transition-all ${
+              index === currentIndex ? "bg-white" : "bg-white/40"
             }`}
           />
         ))}
