@@ -13,7 +13,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-2">Contact</h3>
           <p className="text-charcoal/70">
-            Phone: +91 98765 43210
+            Phone: +91 92632 89XXX
             <br />
             Email: hello@restaurant.com
           </p>

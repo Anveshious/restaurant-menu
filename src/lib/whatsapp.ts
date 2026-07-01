@@ -1,7 +1,5 @@
 import { CartItem, OrderDetails, OrderType } from "@/types";
 
-// One WhatsApp number per order type, set in .env.local.
-// Numbers must be in international format, digits only (e.g. 919876543210).
 const WHATSAPP_NUMBERS: Record<OrderType, string | undefined> = {
   "dine-in": process.env.NEXT_PUBLIC_WA_DINE_IN,
   takeaway: process.env.NEXT_PUBLIC_WA_TAKEAWAY,
