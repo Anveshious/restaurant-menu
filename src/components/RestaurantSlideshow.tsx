@@ -54,8 +54,8 @@ export default function RestaurantSlideshow({ images }: RestaurantSlideshowProps
           key={image}
           src={image}
           alt={`Restaurant view ${index + 1}`}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ease-out ${
+            index === currentIndex ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
           }`}
         />
       ))}
@@ -80,17 +80,23 @@ export default function RestaurantSlideshow({ images }: RestaurantSlideshowProps
         →
       </button>
 
-      <div className="absolute bottom-0 left-1/2 flex w-full max-w-500 -translate-x-1/2 items-center gap-0.2">
+      <div className="absolute bottom-0 left-1/2 flex w-full max-w-500 -translate-x-1/2 items-center gap-0.2 overflow-hidden rounded-b-4xl">
         {images.map((image, index) => (
           <button
             key={image}
             type="button"
             aria-label={`Show slide ${index + 1}`}
             onClick={() => setCurrentIndex(index)}
-            className={`h-1.5 flex-1 rounded-1/2 transition-all ${
-              index === currentIndex ? "bg-white" : "bg-white/40"
+            className={`relative h-1.5 flex-1 overflow-hidden bg-white/40 transition-all duration-500 ${
+              index === currentIndex ? "bg-white/60" : ""
             }`}
-          />
+          >
+            <span
+              className={`absolute left-0 top-0 h-full rounded-full bg-white transition-all duration-700 ease-out ${
+                index === currentIndex ? "w-full" : "w-0 ease-in"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>
