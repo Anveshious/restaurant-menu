@@ -28,12 +28,20 @@ export default function HomePage() {
           Dine in, pick up, or get it delivered — order in under a minute and
           confirm straight on WhatsApp.
         </p>
-        <Link
-          href="/order"
-          className="inline-block bg-spice text-cream px-6 py-3 rounded-md font-medium hover:opacity-90 transition-opacity"
-        >
-          Start an order
-        </Link>
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link
+            href="/order"
+            className="inline-block bg-spice text-cream px-6 py-3 rounded-md font-medium hover:opacity-90 transition-opacity"
+          >
+            Start an order
+          </Link>
+          <Link
+            href="/admin/login"
+            className="inline-block border border-charcoal/15 px-6 py-3 rounded-md font-medium hover:border-spice hover:text-spice transition-colors"
+          >
+            Admin login
+          </Link>
+        </div>
       </section>
 
       <section id="menu" className="max-w-5xl mx-auto px-5 py-12 scroll-mt-24">

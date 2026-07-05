@@ -129,6 +129,12 @@ export default function Navbar() {
             />
           </div>
           <Link
+            href="/admin/login"
+            className="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors"
+          >
+            Admin Login
+          </Link>
+          <Link
             href="/order"
             className="bg-spice text-cream px-4 py-2 rounded-md hover:opacity-90 transition-opacity"
           >
