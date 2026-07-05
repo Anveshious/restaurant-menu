@@ -9,6 +9,7 @@ export interface MenuItem {
   imageUrl?: string;
   isVeg: boolean;
   isAvailable: boolean;
+  source: "manual" | "scanned";
 }
 
 export interface CartItem {
