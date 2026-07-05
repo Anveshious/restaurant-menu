@@ -11,6 +11,7 @@ export const menuData: MenuItem[] = [
     category: "Starters",
     isVeg: true,
     isAvailable: true,
+    source: "manual",
   },
   {
     id: "2",
@@ -20,6 +21,7 @@ export const menuData: MenuItem[] = [
     category: "Starters",
     isVeg: false,
     isAvailable: true,
+    source: "manual",
   },
   {
     id: "3",
@@ -29,6 +31,7 @@ export const menuData: MenuItem[] = [
     category: "Main Course",
     isVeg: false,
     isAvailable: true,
+    source: "manual",
   },
   {
     id: "4",
@@ -38,6 +41,7 @@ export const menuData: MenuItem[] = [
     category: "Main Course",
     isVeg: true,
     isAvailable: true,
+    source: "manual",
   },
   {
     id: "5",
@@ -47,6 +51,7 @@ export const menuData: MenuItem[] = [
     category: "Breads",
     isVeg: true,
     isAvailable: true,
+    source: "manual",
   },
   {
     id: "6",
@@ -56,6 +61,7 @@ export const menuData: MenuItem[] = [
     category: "Desserts",
     isVeg: true,
     isAvailable: true,
+    source: "manual",
   },
 ];
 
