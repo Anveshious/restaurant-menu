@@ -2,6 +2,7 @@ import Link from "next/link";
 import { menuData } from "@/data/menuData";
 import MenuCard from "@/components/menu/MenuCard";
 import RestaurantSlideshow from "@/components/RestaurantSlideshow";
+import RestaurantMap from "@/components/layout/RestaurantMap";
 import fs from "fs";
 import path from "path";
 
@@ -60,24 +61,27 @@ export default function HomePage() {
 
       <section id="contact" className="max-w-5xl mx-auto px-5 py-12 scroll-mt-24">
         <h2 className="text-2xl font-semibold mb-6">Get in touch</h2>
-        <div className="rounded-2xl border border-charcoal/10 bg-cream/80 p-8">
-          <p className="text-charcoal/70 max-w-2xl">
-            Whether you’re planning a quick lunch, a family dinner, or a large
-            takeaway order, our team is ready to help.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-6">
-            <Link href="/order" className="text-spice font-medium hover:underline">
-              Start your order
-            </Link>
-            <a
-              href="https://wa.me/15551234567"
-              target="_blank"
-              rel="noreferrer"
-              className="text-spice font-medium hover:underline"
-            >
-              Message on WhatsApp
-            </a>
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-2xl border border-charcoal/10 bg-cream/80 p-8">
+            <p className="text-charcoal/70 max-w-2xl">
+              Whether you’re planning a quick lunch, a family dinner, or a large
+              takeaway order, our team is ready to help.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-6">
+              <Link href="/order" className="text-spice font-medium hover:underline">
+                Start your order
+              </Link>
+              <a
+                href="https://wa.me/15551234567"
+                target="_blank"
+                rel="noreferrer"
+                className="text-spice font-medium hover:underline"
+              >
+                Message on WhatsApp
+              </a>
+            </div>
           </div>
+          <RestaurantMap address="123 Main Road, Your City" />
         </div>
       </section>
     </>

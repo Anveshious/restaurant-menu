@@ -9,6 +9,14 @@ export default function Footer() {
             <br />
             Open daily, 11am – 11pm
           </p>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=123+Main+Road%2C+Your+City"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 inline-block text-spice hover:underline"
+          >
+            Get directions
+          </a>
         </div>
         <div>
           <h3 className="font-semibold mb-2">Contact</h3>
