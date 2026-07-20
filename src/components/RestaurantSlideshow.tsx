@@ -23,15 +23,15 @@ export default function RestaurantSlideshow({ images }: RestaurantSlideshowProps
 
   if (images.length === 0) {
     return (
-      <div className="mx-auto mb-8 flex h-80 items-center justify-center overflow-hidden rounded-4xl border border-charcoal/10 bg-linear-to-br from-spice/20 via-cream to-charcoal/10 shadow-sm sm:h-112 lg:h-128">
-        <div className="px-6 text-center sm:px-10">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-white/70 text-4xl shadow-sm sm:h-24 sm:w-24 sm:text-5xl">
+      <div className="mx-auto mb-8 flex h-64 items-center justify-center overflow-hidden rounded-4xl border border-charcoal/10 bg-linear-to-br from-spice/20 via-cream to-charcoal/10 shadow-sm sm:h-80">
+        <div className="text-center">
+          <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-white/70 text-3xl shadow-sm">
             📷
           </div>
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-charcoal/60 sm:text-base">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-charcoal/60">
             Restaurant photo placeholder
           </p>
-          <p className="mt-2 text-sm text-charcoal/60 sm:text-base">
+          <p className="mt-2 text-sm text-charcoal/60">
             Add images to the restaurant-images folder to start the slideshow
           </p>
         </div>
